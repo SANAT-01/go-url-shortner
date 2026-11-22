@@ -1,0 +1,16 @@
+# Binaries
+/server
+/bin/
+*.exe
+
+# Env files with real secrets
+.env
+
+# Go build/test artifacts
+*.test
+*.out
+vendor/
+
+# IDE
+.vscode/
+.idea/
