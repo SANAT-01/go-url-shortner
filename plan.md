@@ -52,3 +52,16 @@ urlshortener/
 - `curl -L localhost:8080/{code}` redirects and records a click.
 - `curl localhost:8080/links/{code}/stats` returns click counts.
 - `go test ./...` passes.
+
+## Status
+Steps 1-10 are done: repository, model, service, handler, main.go wiring,
+docker-compose, migrations, README, service-layer unit tests, and a live
+end-to-end run (all 4 endpoints exercised against real Postgres/Redis) all
+verified working.
+
+## TODO (later)
+- Repository integration test: a test against a live Postgres exercising
+  `LinkRepository`/`ClickRepository` directly (the "Testing" section above
+  also mentioned this as a stretch goal, e.g. via `sqlmock` or a test DB).
+  Not done yet — service-layer tests use in-memory fakes instead, so the
+  repository layer currently has no automated test coverage.
